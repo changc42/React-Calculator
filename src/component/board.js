@@ -3,9 +3,13 @@ import '../CSS/board.css';
 import Button from './Button';
 
 export default class componentName extends Component {
+
+  // array of buttons for the board
   static defaultProps={
     buttons: ["(",")","n/a","AC","7","8","9","/","4","5","6","x","1","2","3","-","0",".","=","+"],
   }
+
+
   render() {
     let output = [];
     for(let i=0; i<5; i++){
@@ -13,7 +17,7 @@ export default class componentName extends Component {
         <div className="row">
           {this.props.buttons.slice(i*4,i*4+4).map(e=>(
             <div className="col">
-              <Button content={e}/>
+              <Button content={e} updateScreenValue={this.props.updateScreenValue}/>
             </div>
           ))}
         </div>
