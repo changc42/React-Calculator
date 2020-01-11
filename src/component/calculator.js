@@ -7,7 +7,10 @@ class calculator extends Component {
     render() {
         return (
             <div className="calculator">
-                <Screen />
+                <div>
+                    <Screen />
+                </div>
+                
                 <Board />
             </div>
         );

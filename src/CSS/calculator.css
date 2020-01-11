@@ -3,3 +3,9 @@
     margin: auto;
     font-size: 80px;
 }
+
+.calculator{
+    border: solid 1px;
+    border-radius: 20%;
+    margin: 10px;
+}
