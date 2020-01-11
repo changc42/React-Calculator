@@ -1,0 +1,16 @@
+.board *{
+    border: solid 1px;
+    height: 100px;
+    width: 100px;
+    font-size:50px;
+    background-color: lightgray;
+}
+
+.board{
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.number{
+    background-color: white;
+}
