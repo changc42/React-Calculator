@@ -1,7 +1,32 @@
 .Button{
     border: solid 1px;
+    border-radius: 20%;
+    margin: 10px;
 }
 
 .Button p {
     margin: 0;
+}
+
+.NaN{
+    background-color: lightgray;
+}
+
+.NaN:hover{
+    background-color: #9A9A9A;
+}
+
+.NaN:active{
+}
+
+.Number{
+    background-color: white;
+}
+
+.Number:hover{
+    background-color: #F5F5F5;
+}
+
+.EqualsSign{
+    background-color: lightblue;
 }

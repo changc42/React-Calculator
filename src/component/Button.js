@@ -19,8 +19,17 @@ export default class Button extends Component {
 
 
   render() {
+    let className;
+    let {content}=this.props;
+    if(content=="=") className="EqualsSign";
+    else if(!isNaN(content)) className = "Number";
+    else className = "NaN";
     return (
+<<<<<<< HEAD
+      <div className={`Button ${className}`}>
+=======
       <div className="Button" onClick={this.updateValue}>
+>>>>>>> 9030f4c226b61f9a67a68cda8f79cc2c82c09e2a
           <p>{this.props.content}</p>
       </div>
     );

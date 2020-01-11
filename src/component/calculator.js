@@ -34,8 +34,16 @@ class calculator extends Component {
     render() {
         return (
             <div className="calculator">
+<<<<<<< HEAD
+                <div>
+                    <Screen />
+                </div>
+                
+                <Board />
+=======
                 <Screen value={this.state.value} />
                 <Board updateScreenValue={this.updateScreenValue}/>
+>>>>>>> 9030f4c226b61f9a67a68cda8f79cc2c82c09e2a
             </div>
         );
     }
