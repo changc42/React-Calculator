@@ -1,13 +1,10 @@
 .board{
     font-size:80px;
-    max-width: 1200px;
-    margin: auto;
 }
 
 .row{
     display: flex;
 }
 .col{
-    flex-basis: 100%;
-    flex: 1;
+    flex:1;
 }
