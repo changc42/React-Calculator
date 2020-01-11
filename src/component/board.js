@@ -1,42 +1,27 @@
 import React, { Component } from 'react';
 import '../CSS/board.css';
+import Button from './Button';
 
 export default class componentName extends Component {
+  static defaultProps={
+    buttons: ["(",")","n/a","AC","7","8","9","/","4","5","6","x","1","2","3","-","0",".","=","+"],
+  }
   render() {
+    let output = [];
+    for(let i=0; i<5; i++){
+      output.push(
+        <div className="row">
+          {this.props.buttons.slice(i*4,i*4+4).map(e=>(
+            <div className="col">
+              <Button content={e}/>
+            </div>
+          ))}
+        </div>
+      )
+    }
     return (
-      <div> 
-        <table className="board">
-          <tr>
-            <td>(</td>
-            <td>)</td>
-            <td>n/a</td>
-            <td>AC</td>
-          </tr>
-          <tr>
-            <td className="number">7</td>
-            <td className="number">8</td>
-            <td className="number">9</td>
-            <td>/</td>
-          </tr>
-          <tr>
-            <td className="number">4</td>
-            <td className="number">5</td>
-            <td className="number">6</td>
-            <td>x</td>
-          </tr>
-          <tr>
-            <td className="number">1</td>
-            <td className="number">2</td>
-            <td className="number">3</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td className="number">0</td>
-            <td>.</td>
-            <td>=</td>
-            <td>+</td>
-          </tr>
-        </table>
+      <div className="board">
+        {output}
       </div>
     );
   }
