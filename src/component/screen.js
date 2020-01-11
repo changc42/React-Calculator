@@ -3,14 +3,26 @@ import '../CSS/screen.css'
 
 class screen extends Component {
 
-    static defaultProps = {
-        value: "default",
-    }
+    // static defaultProps = {
+    //     value: "default",
+    // }
+
+
+
 
     render() {
+
+        console.log(this.props.value)
+
+        let output = "";
+
+        this.props.value.forEach(e => {
+            output += e;
+        });
+
         return (
             <div className="screen">
-                <span className="value" >{this.props.value}</span>
+                <span className="value" >{ output }</span>
             </div>
         );
     }
