@@ -1,0 +1,8 @@
+.screen {
+    border: solid 1px;
+    height: 30px;
+    width: 30%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: right;
+}
