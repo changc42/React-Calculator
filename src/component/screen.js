@@ -12,7 +12,8 @@ class screen extends Component {
 
     render() {
 
-        console.log(this.props.value)
+    
+        console.log(this.props.this.state.value)
 
         let output = "";
 
