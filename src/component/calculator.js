@@ -22,10 +22,11 @@ class calculator extends Component {
 
         // }else {
             //this.state.value.push(s)
-                console.log(this.state.value);
-                this.setState(s => { return {value: `${s.value}${s}`}; }, ()=>console.log("finished pushing value to array"));
+                
             
-        // }
+                this.setState({ value: this.state.value.concat(s) });
+            
+        }
         
     }
 

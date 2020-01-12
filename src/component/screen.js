@@ -14,16 +14,33 @@ class screen extends Component {
         console.log("rendering screen")
 
     
+<<<<<<< HEAD
 
         let output = "";
         console.log(this.props.value);
         this.props.value.forEach(e => {
             output += e;
         });
+=======
+        
+
+        
+
+
+        // this.props.value.forEach(e => {
+        //     output += e;
+        // });
+        // for(let i=0; i<this.props.value.length; i++){
+        //     console.log(this.props.value)
+        //     output += this.props.value[i]
+        // }
+
+
+>>>>>>> 1343a731042c3112042a7e391f7770f574dfba81
 
         return (
             <div className="screen">
-                <span className="value" >{ output }</span>
+                <span className="value" >{ this.props.value }</span>
             </div>
         );
     }
