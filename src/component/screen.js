@@ -14,14 +14,6 @@ class screen extends Component {
         console.log("rendering screen")
 
     
-<<<<<<< HEAD
-
-        let output = "";
-        console.log(this.props.value);
-        this.props.value.forEach(e => {
-            output += e;
-        });
-=======
         
 
         
@@ -36,7 +28,6 @@ class screen extends Component {
         // }
 
 
->>>>>>> 1343a731042c3112042a7e391f7770f574dfba81
 
         return (
             <div className="screen">
