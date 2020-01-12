@@ -1,9 +1,7 @@
 .screen {
-    border: solid 1px;
-    margin: auto;
-    margin-top: 20px;
+    border: solid 1px #d3d3d3;
+    margin: 10px;
     text-align: right;
 
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
+    border-radius: 15px;
 }

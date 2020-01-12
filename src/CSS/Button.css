@@ -1,7 +1,11 @@
 .Button{
-    border: solid 1px;
-    border-radius: 20%;
+    border-radius: 15px;
     margin: 10px;
+    border: solid 1px transparent;
+}
+
+.Button:active{
+    border: solid 1px;
 }
 
 .Button p {
@@ -20,11 +24,11 @@
 }
 
 .Number{
-    background-color: white;
+    background-color: #f1f3f4;
 }
 
 .Number:hover{
-    background-color: #F5F5F5;
+    background-color: #E5E5E5;
 }
 
 .EqualsSign{
