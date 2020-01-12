@@ -17,10 +17,10 @@ class calculator extends Component {
     updateScreenValue(s) {
         if(s === 'AC') {
             this.setState({ value: [0] })
-        }else if(s === '/' || s === '+' || s === '-' || s === 'x'){
+        }else if(s === '/' || s === '+' || s === '-' || s === 'x' || s==='='){
             this.setState({ value: this.state.value })
         }else {
-                this.setState({ value: this.state.value.concat(s) });
+            this.setState({ value: this.state.value.concat(s) });
             
         }
         
