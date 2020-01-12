@@ -13,17 +13,24 @@ class screen extends Component {
     render() {
 
     
-        console.log(this.props.this.state.value)
+        
 
-        let output = "";
+        
 
-        this.props.value.forEach(e => {
-            output += e;
-        });
+
+        // this.props.value.forEach(e => {
+        //     output += e;
+        // });
+        // for(let i=0; i<this.props.value.length; i++){
+        //     console.log(this.props.value)
+        //     output += this.props.value[i]
+        // }
+
+
 
         return (
             <div className="screen">
-                <span className="value" >{ output }</span>
+                <span className="value" >{ this.props.value }</span>
             </div>
         );
     }
