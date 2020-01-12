@@ -16,7 +16,7 @@ class calculator extends Component {
     // updates the state on the screen
     updateScreenValue(s) {
         if(s === 'AC') {
-            this.setState({ value: '0' })
+            this.setState({ value: [0] })
         }else if(s === '/' || s === '+' || s === '-' || s === 'x'){
             this.setState({ value: this.state.value })
         }else {
