@@ -7,17 +7,7 @@ class screen extends Component {
     //     value: "default",
     // }
 
-
-
-
     render() {
-        console.log("rendering screen")
-
-    
-        
-
-        
-
         let output = ""
         this.props.value.forEach(e => {
             output += e;
