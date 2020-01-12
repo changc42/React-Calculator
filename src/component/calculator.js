@@ -15,20 +15,18 @@ class calculator extends Component {
 
     // updates the state on the screen
     updateScreenValue(s) {
-        console.log("calling updateScreenValue")
-        // if(s === 'AC') {
-        //     this.setState({ value: '0' })
-        // }else if(s === '/' || s === '+' || s === '-' || s === 'x'){
-
-        // }else {
-            //this.state.value.push(s)
-                
-            
+        if(s === 'AC') {
+            this.setState({ value: '0' })
+        }else if(s === '/' || s === '+' || s === '-' || s === 'x'){
+            this.setState({ value: this.state.value })
+        }else {
                 this.setState({ value: this.state.value.concat(s) });
             
         }
         
     }
+    //testkk
+    hh
 
 
 
