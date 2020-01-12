@@ -18,10 +18,8 @@ class calculator extends Component {
         if(s === 'AC') {
             this.setState({ value: '0' })
         }else if(s === '/' || s === '+' || s === '-' || s === 'x'){
-
+            this.setState({ value: this.state.value })
         }else {
-            //this.state.value.push(s)
-            
                 this.setState({ value: this.state.value.concat(s) });
             
         }
