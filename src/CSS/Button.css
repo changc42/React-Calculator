@@ -5,7 +5,7 @@
 }
 
 .Button:active{
-    border: solid 1px;
+    border: solid 1px black;
 }
 
 .Button p {
@@ -31,6 +31,12 @@
     background-color: #E5E5E5;
 }
 
+
 .EqualsSign{
-    background-color: lightblue;
+    background-color: #4285f4;
+    color: white;
+}
+
+.EqualsSign:hover{
+    background-color: #649BF6;
 }
