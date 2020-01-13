@@ -8,19 +8,19 @@ class calculator extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            value: [0],
+            display: [0],
          }
-        this.updateScreenValue = this.updateScreenValue.bind(this)
+        this.updateScreenDisplay = this.updateScreenDisplay.bind(this)
     }
 
     // updates the state on the screen
-    updateScreenValue(s) {
+    updateScreenDisplay(s) {
         if(s === 'AC') {
-            this.setState({ value: [0] })
+            this.setState({ display: [0] })
         }else if(s === '/' || s === '+' || s === '-' || s === 'x' || s==='='){
-            this.setState({ value: this.state.value })
+            this.setState({ display: this.state.display })
         }else {
-            this.setState({ value: this.state.value.concat(s) });
+            this.setState({ display: this.state.display.concat(s) });
             
         }
         
@@ -29,8 +29,8 @@ class calculator extends Component {
     render() {
         return (
             <div className="calculator">
-                <Screen value={this.state.value} />
-                <Board updateScreenValue={this.updateScreenValue}/>
+                <Screen display={this.state.display} />
+                <Board updateScreenDisplay={this.updateScreenDisplay}/>
             </div>
         );
     }
