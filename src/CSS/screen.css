@@ -5,3 +5,19 @@
 
     border-radius: 15px;
 }
+
+.subD{
+    margin: 0px;
+    font-size: 40px;
+    color: gray;
+}
+
+.mainD{
+    margin:0px;
+}
+
+.blank{
+    margin:0px;
+    opacity:0;
+    font-size:40px;
+}

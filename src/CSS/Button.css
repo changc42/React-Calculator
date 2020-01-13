@@ -12,15 +12,16 @@
     margin: 0;
 }
 
+.Button:hover{
+    cursor: pointer;
+}
+
 .NaN{
     background-color: lightgray;
 }
 
 .NaN:hover{
     background-color: #9A9A9A;
-}
-
-.NaN:active{
 }
 
 .Number{

@@ -17,7 +17,7 @@ export default class componentName extends Component {
         <div className="row">
           {this.props.buttons.slice(i*4,i*4+4).map(e=>(
             <div className="col">
-              <Button content={e} updateScreenValue={this.props.updateScreenValue}/>
+              <Button content={e} updateScreenValue={this.props.updateScreenDisplay}/>
             </div>
           ))}
         </div>
