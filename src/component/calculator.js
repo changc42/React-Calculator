@@ -20,8 +20,8 @@ class calculator extends Component {
         }else if(s === '/' || s === '+' || s === '-' || s === 'x' || s==='='){
             this.setState({ display: this.state.display })
         }else {
-            this.setState({ display: this.state.display.concat(s) });
             
+                this.setState({ value: [...this.state.display, s] });
         }
         
     }
