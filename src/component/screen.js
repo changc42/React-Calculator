@@ -7,6 +7,11 @@ class screen extends Component {
     //     display: "default",
     // }
 
+    brakeInTwo(str) {
+            return <span><span>{str.splice(0, str.length-1)}</span> <span className={"gray"}>{str.splice(str.length-1)}</span></span>
+        
+    }
+
     render() {
         // let output = ""
         // this.props.display.forEach(e => {
@@ -21,7 +26,7 @@ class screen extends Component {
         return (
             <div className="screen">
                 {this.props.subD==""? <p className="blank">blank</p>:<p className="subD">{this.props.subD}</p>}
-                <p className="mainD" >{this.props.mainD}</p>
+        <p className="mainD" >{this.brakeInTwo}</p>
             </div>
         );
     }
