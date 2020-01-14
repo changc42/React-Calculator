@@ -68,7 +68,6 @@ class calculator extends Component {
                 if(operation=="x") result *= operand;
             }
         }
-        this.updateScreenDisplay = this.updateScreenDisplay.bind(this);
         
     }
 
