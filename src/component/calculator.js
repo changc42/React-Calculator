@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Screen from './screen'
 import Board from  './board'
 import '../CSS/calculator.css';
-import evalToCloseOrEnd from '../functions/evalToCloseOrEnd';
+import evaluate from '../functions/evaluate';
 
 class calculator extends Component {
     
@@ -15,51 +15,7 @@ class calculator extends Component {
             prent: ""
          }
         this.updateScreenDisplay = this.updateScreenDisplay.bind(this)
-        this.evaluate=this.evaluate.bind(this)
     }
-
-    function evaluate(s){
-        let number=null;
-        let pow=0;
-        let arr =[];
-        while(s.length!=0){
-            let c = s.charAt(s.length-1);
-            s = s.slice(0,s.length-1);
-            if(!isNaN(c)){
-                if(number==null) number=0;
-                number += c*Math.pow(10,pow);
-                pow++;
-            }
-            else if(c=="+" || c=="-" || c=="/" || c=="x" || c==")"){
-                if(c=="-" && (s.length==0 || s.charAt(s.length-1)=="(") ){ //check if "-" acts as negative or subtract
-                    if(number==null) arr[0] = arr[0]*(-1);
-                    else number *= -1;
-                }
-                else{
-                    if(number!=null){
-                        arr.unshift(number.toString());
-                        number=null;
-                        pow=0;
-                    }
-                    arr.unshift(c);
-                }
-            }
-            else if(c=="("){
-                if(number!=null){
-                    arr.unshift(number.toString());
-                    number=null;
-                    pow=0;
-                }
-                evalToCloseOrEnd(arr);
-            }
-        }
-        if(number!=null) arr.unshift(number.toString());
-        evalToCloseOrEnd(arr);
-        
-        return arr[0].toString();
-    }
-
-    
 
     // updates the state on the screen
     updateScreenDisplay(s) {
