@@ -5,7 +5,7 @@ export default class Button extends Component {
 
     constructor(props) {
       super(props);
-      this.updateValue = this.updateValue.bind(this)
+      this.handleClick = this.handleClick.bind(this)
     }
 
     static defaultProps={
@@ -13,8 +13,7 @@ export default class Button extends Component {
     }
 
     // this grabs the value from user click and passes it up to screen
-    updateValue() {
-      console.log("inside button. calling update Value");
+    handleClick() {
       this.props.updateScreenValue(this.props.content)
     }
 
@@ -27,7 +26,7 @@ export default class Button extends Component {
     else className = "NaN";
     return (
       
-      <div className={`Button ${className}`} onClick={this.updateValue}>
+      <div className={`Button ${className}`} onClick={this.handleClick}>
           <p>{this.props.content}</p>
       </div>
     );
