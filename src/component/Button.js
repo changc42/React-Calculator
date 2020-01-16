@@ -21,7 +21,7 @@ export default class Button extends Component {
   render() {
     let className;
     let {content}=this.props;
-    if(content=="=") className="EqualsSign";
+    if(content==="=") className="EqualsSign";
     else if(!isNaN(content)) className = "Number";
     else className = "NaN";
     return (
