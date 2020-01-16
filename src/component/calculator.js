@@ -63,7 +63,7 @@ class calculator extends Component {
                 })
             }
         } // end of "n"
-        else if(prevClick=="o"){
+        else if(prevClick==="o" && !gray){
             if(!isNaN(s)){
                 this.setState({
                     prevClick:"n",
@@ -87,9 +87,12 @@ class calculator extends Component {
                     mainD: mainD+s+")"
                 })
             }else if(s === ")"){
-                this.setState({
-                    mainD: mainD
-                })
+                let lastChar = s.slice(s.length-2);
+                if(lastChar !== '/' || lastChar !== '+' || lastChar !== '-' || lastChar !== 'x') {
+                    this.setState({
+                        mainD: mainD
+                    })
+                }
             }
         }  // end of "o" else if
         else if(prevClick === "e"){
@@ -141,14 +144,26 @@ class calculator extends Component {
                 })
             } else if(s === "(") {
                 this.setState({
-                    mainD: mainD
+                    mainD: mainD,
+                    open: "open",
+                    gray: true
                 })
             }else if(s === ")"){
-                this.setState({
-                    mainD: currVal + s,
-                    gray: false,
-                    prevClick: "close"
-                })
+                let lastChar1 = mainD.slice(mainD.length-2);
+                let lastChar = lastChar1.slice(0, lastChar1.length-1)
+                console.log(lastChar)
+                if(lastChar === '/' || lastChar === '+' || lastChar === '-' || lastChar === 'x') {
+                    this.setState({
+                        mainD: currVal + ")",
+                        open: "open"
+                    })
+                }else {
+                    this.setState({
+                        mainD: currVal + s,
+                        gray: false,
+                        prevClick: "close"
+                    })
+                }
             }
         } // if of open
         else if(prevClick === 'close') {
