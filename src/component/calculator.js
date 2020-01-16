@@ -39,11 +39,13 @@ class calculator extends Component {
                     mainD: mainD+s,
                 });
             }else if(s === "="){
+                let result = evaluate(mainD);
+                 console.log(result)
                 // do what the doc says 
                 this.setState({
                     prevClick: "e",
                     subD: mainD+s,
-                    mainD: "696969",
+                    mainD: result
                 })
             }else if(s == "(") {
                 if(mainD === "0"){
@@ -76,10 +78,11 @@ class calculator extends Component {
                     mainD: mainD.substring(0,mainD.length-1)+s,
                 })
             }else if(s === "=") {
+                let result = evaluate(s);
                 this.setState({
                     prevClick: "e",
                     subD: mainD.substring(0,mainD.length-1)+s,
-                    mainD: "696969",
+                    mainD: result
                 })
             }else if(s === "(" ) {
                 this.setState({
@@ -167,11 +170,31 @@ class calculator extends Component {
             }
         } // if of open
         else if(prevClick === 'close') {
-            this.setState({
-                mainD: mainD + s,
-                prevClick: "close"
-
-            })
+            if(!isNaN(s)) {
+                this.setState({
+                    mainD: mainD + s,
+                    prevClick: "n",
+                    gray: false
+                })
+            } else if(s === '/' || s === '+' || s === '-' || s === 'x') {
+                this.setState({
+                    mainD: mainD + s,
+                    gray: false,
+                    prevClick: "o"
+                })
+            }  else if(s === "=") {
+                let result = evaluate(mainD);
+                this.setState({
+                    mainD: result,
+                    gray: false
+                })
+            } else if(s === "(") {
+                this.setState({
+                    mainD: mainD + "()",
+                    open: "open",
+                    gray: true
+                })
+            }
 
         } // end of close
         
