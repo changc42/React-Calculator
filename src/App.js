@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Calculator from './component/calculator'
+import React, { Component } from "react";
+import "./App.css";
+import Calculator from "./component/calculator";
 
 function App() {
   return (
