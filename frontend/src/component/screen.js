@@ -12,7 +12,7 @@ class screen extends Component {
     render() {
         
 
-        console.log(this.brakeInTwo(JSON.stringify(this.props.mainD)))
+        // console.log(this.brakeInTwo(JSON.stringify(this.props.mainD)))
 
 
         return (
